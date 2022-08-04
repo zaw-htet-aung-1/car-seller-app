@@ -1,25 +1,25 @@
 export default [
     {
         'id' : '0',
-        'description' : 'Mandalay,Myanmar'
+        'description' : 'Toyota'
     },
     {
         'id' : '1',
-        'description' : 'Yangon,Myanmar'
+        'description' : 'Honda'
     },
     {
         'id' : '2',
-        'description' : 'Bago,Myanmar'
+        'description' : 'Hyundai'
     },
 
     {
         'id' : '3',
-        'description' : 'Bagan,Myanmar'
+        'description' : 'Chevrolet'
     },
 
     {
         'id' : '4',
-        'description' : 'Ngapali,Myanmar'
+        'description' : 'BMW'
     },
 
 

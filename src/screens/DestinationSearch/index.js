@@ -12,7 +12,7 @@ const DestinationSearchScreen = () => {
     return (
         <View style={styles.textContainer}>
            <TextInput style={styles.textInput}
-           placeholder='Where are you going?'
+           placeholder='Search your car here...'
            value = {inputText}
            onChangeText={setInputText}
            />
@@ -22,7 +22,7 @@ const DestinationSearchScreen = () => {
            renderItem={({item}) =>(
             <Pressable onPress={()=> navigation.navigate('Guests')} style={styles.row}>
                 <View style={styles.iconContainer}>
-                    <Entype name={'location-pin'} size={30} />
+                    <Entype name={'info'} size={30} />
                 </View>
                 <Text  style={styles.locationText}>{item.description}</Text>  
             </Pressable>

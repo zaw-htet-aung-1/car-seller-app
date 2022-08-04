@@ -1,5 +1,5 @@
 import React from "react";
-import { View,Text,FlatList, SafeAreaView } from "react-native";
+import { View,Text,FlatList, SafeAreaView, Image } from "react-native";
 import Post from '../../components/Post'
 import feed from '../../../assets/data/feed';
 

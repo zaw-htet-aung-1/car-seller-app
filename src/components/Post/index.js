@@ -1,16 +1,23 @@
 import React from "react";
-import { SafeAreaView, StatusBar, View,Text,Image } from "react-native";
+import { SafeAreaView, StatusBar, View,Text,Image, Pressable } from "react-native";
 import styles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 
 
 const Post = (props) => {
 
     const post = props.post;
+    const navigation = useNavigation();
+
+    const goToPostPage = () => {
+        navigation.navigate('Post')
+
+    }
 
     return (
         <SafeAreaView>
             <StatusBar/>
-            <View style={styles.container}>
+            <Pressable onPress={goToPostPage} style={styles.container}>
             <Image 
             style={styles.image}
             source={{uri:post.image}}
@@ -34,7 +41,7 @@ const Post = (props) => {
 
             {/* total Price */}
             <Text style={styles.totalPrice}>{post.totalPrice}$ Total</Text>
-        </View></SafeAreaView>
+        </Pressable></SafeAreaView>
     );
 };
 

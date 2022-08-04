@@ -52,7 +52,7 @@ const HomeTabNavigator = () => {
              component = {HomeScreen}
              options ={{
                 tabBarIcon:({color:string}) => (
-                    <Feather name="message-square" size={25} color={'black'}/>
+                    <Feather name="plus-circle" size={25} color={'black'}/>
                 ),
                 headerShown:false,
              }} 

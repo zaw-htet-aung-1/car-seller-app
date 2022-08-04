@@ -21,7 +21,7 @@ const Router = () => {
             name={"SearchResults"}
             component = {SearchResultsTabNavigator}
             options={{
-                title:"Search your destination",
+                title:"Find your car",
             }}
             />
         </Stack.Navigator>

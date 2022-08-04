@@ -10,15 +10,21 @@ const styles = StyleSheet.create({
         
     },
     title:{
-        fontSize:30,
-        fontWeight:'bold',
-        color:'white',
-        width:'100%',
-        marginLeft:25,
-        paddingTop:650,
-       marginLeft:70,
-       textDecorationLine:'line-through',
-       letterSpacing:3
+    //     fontSize:30,
+    //     fontWeight:'bold',
+    //     color:'white',
+    //     width:'100%',
+    //     marginLeft:25,
+    //     paddingTop:650,
+    //    marginLeft:70,
+    //    textDecorationLine:'line-through',
+    //    letterSpacing:3
+    fontSize: 50,
+    fontWeight: 'bold',
+    color: '#50c878',
+    width: '70%',
+    marginLeft: 70,
+    paddingTop:250,
     },
     button:{
         backgroundColor:'#fff',
@@ -50,11 +56,13 @@ const styles = StyleSheet.create({
         position:'absolute',
         top:70,
         zIndex:100,
+        borderColor:'black'
 
     },
     searchButtonText:{
         fontSize:16,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        color:'#50c878'
     },
 
 });

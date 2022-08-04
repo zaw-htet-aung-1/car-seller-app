@@ -15,8 +15,8 @@ const GuestsScreen = () => {
           <View>
             <View style={styles.row}>
             <View>
-                <Text style={{fontWeight:'bold'}}>Adults</Text>
-                <Text style={{color:'#8d8d8d'}}>Age 13 or above</Text>
+                <Text style={{fontWeight:'bold'}}>Model</Text>
+                {/* <Text style={{color:'#8d8d8d'}}>Age 13 or above</Text> */}
             </View>
             <View style={{flexDirection:'row',alignItems:'center'}}>
                 <Pressable onPress={() => setAdults(Math.max(value=0, adults -1) )}
@@ -34,8 +34,8 @@ const GuestsScreen = () => {
            {/*  */}
            <View style={styles.row}>
           <View>
-            <Text style={{fontWeight: 'bold'}}>Children</Text>
-            <Text style={{color: '#8d8d8d'}}>Ages 2-12</Text>
+            <Text style={{fontWeight: 'bold'}}>Year</Text>
+            {/* <Text style={{color: '#8d8d8d'}}>Ages 2-12</Text> */}
           </View>
           <View style={{flexDirection: 'row', alignItems: 'center'}}>
             <Pressable
@@ -56,8 +56,8 @@ const GuestsScreen = () => {
            {/*  */}
            <View style={styles.row}>
             <View>
-                <Text style={{fontWeight:'bold'}}>Infants</Text>
-                <Text style={{color:'#8d8d8d'}}>Age 13 or above</Text>
+                <Text style={{fontWeight:'bold'}}>Price</Text>
+                {/* <Text style={{color:'#8d8d8d'}}>Age 13 or above</Text> */}
             </View>
             <View style={{flexDirection:'row',alignItems:'center'}}>
                 <Pressable onPress={() => setInfants(Math.max(value=0, infants -1) )}

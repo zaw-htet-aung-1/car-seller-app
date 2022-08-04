@@ -12,10 +12,10 @@ const SearchResultsTabNavigator = () => {
                 backgroundColor:'#f15454'
             }
         }}>
-            <Tab.Screen name={"List"}
+            <Tab.Screen name={"BuyLists"}
             component = {SearchResults}
             />
-            <Tab.Screen name={"Map"}
+            <Tab.Screen name={"SaleLists"}
             component = {SearchResults}
             />
         </Tab.Navigator>
