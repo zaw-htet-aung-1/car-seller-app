@@ -2,23 +2,23 @@ import { cloneElement } from "react";
 import { StyleSheet, Dimensions } from "react-native";
 
 const styles = StyleSheet.create({
-    view:{
-        paddingTop:50
-
-    },
     image:{
         width:'100%',
-        height:700,
+        height:850,
         resizeMode:'cover',
-        justifyContent:"center",
+        // justifyContent:"center",
         
     },
     title:{
-        fontSize:60,
+        fontSize:30,
         fontWeight:'bold',
         color:'white',
-        width:'70%',
+        width:'100%',
         marginLeft:25,
+        paddingTop:650,
+       marginLeft:70,
+       textDecorationLine:'line-through',
+       letterSpacing:3
     },
     button:{
         backgroundColor:'#fff',
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:'center',
         position:'absolute',
-        top:60,
+        top:70,
         zIndex:100,
 
     },

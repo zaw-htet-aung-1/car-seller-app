@@ -7,29 +7,29 @@ import {
     } from "react-native";
 import styles from "./styles";
 import Entype from 'react-native-vector-icons/Entypo';
-
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen = () => {
+    const navigation = useNavigation();
     return (
         <View style={styles.view}>
-            
-
-           <ImageBackground source={require('../../../assets/images/OP.webp')} 
-           style={styles.image}>
-
             <Pressable style={styles.searchButton}
-                onPress={()=> console.warn(data,'Search Btn clicked')}
-                >
-                <Entype name={'magnifying-glass'} size={25} color={'#f15454'} />
+                onPress={() => navigation.navigate('Destination Search')}>
+                <Entype name={'magnifying-glass'} size={25} color={'black'} />
                 <Text style={styles.searchButtonText}>What do you want?</Text>
             </Pressable>
+            
+           <ImageBackground source={require('../../../assets/images/flower.jpg')} 
+           style={styles.image}>
 
-            <Text style={styles.title}>Search Less Live More</Text>
+            
 
-            <Pressable style={styles.button}
+            <Text style={styles.title}>PEACEMINUSONE</Text>
+
+            {/* <Pressable style={styles.button}
                 onPress={()=> console.warn(data,'Explore Btn clicked')}>
                 <Text style={styles.buttonText}>Search</Text>
-            </Pressable>
+            </Pressable> */}
             </ImageBackground> 
         </View>
     );
