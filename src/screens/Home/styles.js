@@ -18,13 +18,13 @@ const styles = StyleSheet.create({
     //     paddingTop:650,
     //    marginLeft:70,
     //    textDecorationLine:'line-through',
-    //    letterSpacing:3
+       letterSpacing:3,
     fontSize: 50,
     fontWeight: 'bold',
-    color: '#50c878',
+    color: 'black',
     width: '70%',
     marginLeft: 70,
-    paddingTop:250,
+    paddingTop:170,
     },
     button:{
         backgroundColor:'#fff',
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     searchButtonText:{
         fontSize:16,
         fontWeight:'bold',
-        color:'#50c878'
+        color:'black'
     },
 
 });

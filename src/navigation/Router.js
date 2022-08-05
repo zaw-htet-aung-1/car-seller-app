@@ -3,7 +3,6 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
 import DestinationSearchScreen from "../screens/DestinationSearch";
 import HomeTabNavigator from "./HomeTabNavigator";
-import GuestsScreen from "../screens/Guests";
 import PostScreen from "../screens/PostScreen";
 import DetailedPost from "../components/DetailedPost";
 // import PostScreen from "../screens/PostScreen";
@@ -25,21 +24,14 @@ const Router = () => {
                     name={'Destination Search'}
                     component = {DestinationSearchScreen}
                     options ={{
-                    title:"Search your destination",
-                    }}
-                />
-                <Stack.Screen
-                    name={"Guests"}
-                    component={GuestsScreen}
-                    options={{
-                    title: "How many people?"
+                    title:"Search your cars here",
                     }}
                 />
                 <Stack.Screen
                     name={"Post"}
                     component={PostScreen}
                     options={{
-                    title: "Accommodation"
+                    title: "Car Details"
                     }}
                 />
             </Stack.Navigator>

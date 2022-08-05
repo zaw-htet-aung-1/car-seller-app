@@ -20,7 +20,7 @@ const DestinationSearchScreen = () => {
            <FlatList
            data={searchResults}
            renderItem={({item}) =>(
-            <Pressable onPress={()=> navigation.navigate('Guests')} style={styles.row}>
+            <Pressable onPress={()=> navigation.navigate('SearchResults')} style={styles.row}>
                 <View style={styles.iconContainer}>
                     <Entype name={'info'} size={30} />
                 </View>
@@ -28,7 +28,28 @@ const DestinationSearchScreen = () => {
             </Pressable>
               )}
             />
+             <View>
+            <Pressable
+            onPress={()=> navigation.navigate('Home',{
+              screen:'Explore',
+              params:{
+                screen:'SearchResults',
+              }
+            }) }
+             style={{
+              marginBottom:20,
+              marginTop:100,
+               backgroundColor:'black',
+               alignItems:'center',
+               justifyContent:'center',
+               height:50,
+               marginHorizontal:20,
+               borderRadius:10}}>
+              <Text style={{fontSize:20,color:'white',fontWeight:'bold'}}>Search</Text>
+            </Pressable>
+          </View>
         </View>
+        
     );
 };
 

@@ -1,4 +1,6 @@
+import reactDom from "react-dom";
 import { StyleSheet } from "react-native";
+
 
 
 const styles = StyleSheet.create({
@@ -9,21 +11,59 @@ const styles = StyleSheet.create({
 
     image:{
         width:'100%',
-        aspectRatio:16/9,
+        aspectRatio:4/2,
         resizeMode:'cover',
         borderRadius:10,
     },
-    bedrooms:{
-        marginVertical:10,
-        color:'#5b5b5b'
+    // bedrooms:{
+    //     marginVertical:10,
+    //     color:'#5b5b5b'
+    // },
+    row: {
+        marginTop:10,
+        flexDirection: "row",
     },
-    description:{
-        fontSize:18,
-        lineHeight:26,
+    manufacturer:{
+       marginLeft:3,
+        color:'black',
+        fontSize:15,
+        fontWeight:'bold',
     },
+    model:{
+        marginLeft:20,
+        fontSize:15,
+        fontWeight:'bold',
+    },
+    // description:{
+    //     fontSize:18,
+    //     lineHeight:26,
+    // },
     prices:{
-        fontSize:18,
+       
+        fontSize:15,
         paddingTop:10,
+    },
+    price:{
+        marginLeft:3,
+        marginTop:1,
+        fontWeight:'bold',
+        fontSize:15,
+    },
+    location:{
+        marginTop:5,
+        marginLeft:50,
+        fontSize:18,
+    },
+    seller:{
+        marginTop:5,
+        marginLeft:8,
+        fontSize:18,
+    },
+    uploaded_at:{
+        marginTop:1,
+        marginLeft:60,
+        fontSize:15,
+        fontWeight:'bold',
     },
     oldPrice:{
         color:'#5b5b5b',

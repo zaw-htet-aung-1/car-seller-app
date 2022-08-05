@@ -1,14 +1,17 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/Home";
+import ProfileScreen from "../screens/Profile";
 import ExploreNavigator from './ExploreNavigator';
-import PostScreen from "../screens/PostScreen";
+import SignInScreen from "../screens/SignInScreen";
+import Post from "../components/Post";
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import SearchResultsScreen from "../screens/SearchResults";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,7 +42,7 @@ const HomeTabNavigator = () => {
             />
             <Tab.Screen
              name={"Home"}
-             component = {HomeScreen}
+             component = {SearchResultsScreen}
              options ={{
                 tabBarIcon:({color:string}) => (
                     <FontAwesome5 name="airbnb" size={25} color={'black'}/>
@@ -49,7 +52,7 @@ const HomeTabNavigator = () => {
             />
             <Tab.Screen
              name={"Create"}
-             component = {HomeScreen}
+             component = {SignInScreen}
              options ={{
                 tabBarIcon:({color:string}) => (
                     <Feather name="plus-circle" size={25} color={'black'}/>
@@ -59,7 +62,7 @@ const HomeTabNavigator = () => {
             />
             <Tab.Screen
              name={"Profile"}
-             component = {HomeScreen}
+             component = {ProfileScreen}
              options ={{
                 tabBarIcon:({color:string}) => (
                     <EvilIcons name="user" size={36} color={'black'}/>

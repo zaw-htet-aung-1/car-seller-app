@@ -2,6 +2,7 @@ import React from "react";
 import { SafeAreaView, StatusBar, View,Text,Image, Pressable } from "react-native";
 import styles from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 
 const Post = (props) => {
@@ -10,7 +11,7 @@ const Post = (props) => {
     const navigation = useNavigation();
 
     const goToPostPage = () => {
-        navigation.navigate('Post')
+        navigation.navigate('Post', {postId:post.id});
 
     }
 
@@ -22,25 +23,17 @@ const Post = (props) => {
             style={styles.image}
             source={{uri:post.image}}
             />
+            <View style={styles.row}>
+            {/* <FontAwesome5 name="car" size={20} color={'black'}/> */}
+            <Text style={styles.manufacturer}>Manufacturer - {post.manufacturer}</Text>
+            <Text style={styles.model}> Car Model - {post.model} </Text>
+            </View>
 
-            {/* Bed */}
-            <Text style={styles.bedrooms}>{post.bed} bed {post.bedroom} bedroom</Text>
-
-            {/* Type&Description */}
-            <Text style={styles.description} numberOfLines={3} >
-            {post.type}, {post.title}
-            Paragraphs are medium-sized units of writing, longer than sentences, but shorter than sections, chapters, or entire works. Because they connect the “small” ideas of individual sentences to a “bigger” idea, paragraph structure is essential to any writing for organization, flow, and comprehension. 
-            </Text>
-
-            {/*  old and new price*/}
-            <Text style={styles.prices}>
-                <Text style={styles.oldPrice}> {post.oldPrice}$</Text>
-                <Text style={styles.newPrice}>  {post.newPrice}$ </Text>/night
-                </Text>
-            
-
-            {/* total Price */}
-            <Text style={styles.totalPrice}>{post.totalPrice}$ Total</Text>
+            <View style={styles.row}>
+            {/* <FontAwesome5 name="dollar-sign" size={20} color={'black'}/> */}
+            <Text style={styles.price}>Price - {post.price}lakhs</Text>
+            <Text style={styles.uploaded_at} >Uploaded at - {post.uploaded_at}</Text>
+            </View> 
         </Pressable></SafeAreaView>
     );
 };

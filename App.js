@@ -11,7 +11,7 @@ import Router from './src/navigation/Router';
 // import Post from './src/components/Post';
 // import SearchResultsScreen from './src/screens/SearchResults';
 // import DestinationSearchScreen from './src/screens/DestinationSearch';
-import GuestsScreen from './src/screens/Guests';
+
 const post1 = feed[0];
 const post2 = feed[1];
 const post3 = feed[2];

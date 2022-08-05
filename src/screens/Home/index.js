@@ -15,11 +15,11 @@ const HomeScreen = () => {
         <View style={styles.view}>
             <Pressable style={styles.searchButton}
                 onPress={() => navigation.navigate('Destination Search')}>
-                <Entype name={'magnifying-glass'} size={25} color={'#50c878'} />
+                <Entype name={'magnifying-glass'} size={25} color={'black'} />
                 <Text style={styles.searchButtonText}>What do you want?</Text>
             </Pressable>
             
-           <ImageBackground source={require('../../../assets/images/car-seller-home.png')} 
+           <ImageBackground source={require('../../../assets/images/car-home.webp')} 
            style={styles.image}>
 
             
