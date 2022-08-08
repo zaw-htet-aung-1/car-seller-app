@@ -4,6 +4,7 @@ import HomeScreen from "../screens/Home";
 import ProfileScreen from "../screens/Profile";
 import ExploreNavigator from './ExploreNavigator';
 import SignInScreen from "../screens/SignInScreen";
+import SignInNavigator from "./SignInNavigator";
 import Post from "../components/Post";
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
@@ -52,7 +53,7 @@ const HomeTabNavigator = () => {
             />
             <Tab.Screen
              name={"Create"}
-             component = {SignInScreen}
+             component = {SignInNavigator}
              options ={{
                 tabBarIcon:({color:string}) => (
                     <Feather name="plus-circle" size={25} color={'black'}/>

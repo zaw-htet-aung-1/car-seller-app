@@ -1,8 +1,9 @@
 import React, {useState} from "react";
-import { View, Text, SafeAreaView, useWindowDimensions } from "react-native";
+import { View, Text, SafeAreaView, useWindowDimensions,ScrollView, TouchableOpacity, TextComponent } from "react-native";
 import styles from "./styles";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
+import { useNavigation } from "@react-navigation/native";
 
 const SignInScreen = () => {
     const [username, setUsername] = useState('');
@@ -14,11 +15,15 @@ const SignInScreen = () => {
         console.warn("Sign In")
     }
 
-    const onForgotPasswordPressed = () => {
-        console.warn("Forgot password?")
+    const onSignInFacebook = () => {
+        console.warn("onSignInFacebook")
     }
 
+    const navigation = useNavigation();
+
     return (
+        // <ScrollView>
+        
           <View style={styles.root}>
             <Text style={styles.text}>Car Seller Application</Text>
             
@@ -34,12 +39,29 @@ const SignInScreen = () => {
                 secureTextEntry={true}
             />
             <CustomButton text='Sign In' onPress={onSignInPressed} />
+            
+            <CustomButton
+            text="Sign In with Facebook"
+            onPress={onSignInFacebook}
+            bgColor="#E7EAF4"
+            fgColor="#4765A9"
+            />
+            
             <CustomButton 
             text='Forgot password?' 
-            onPress={onForgotPasswordPressed}
-            type='TERTIARY'
+            onPress={()=> navigation.navigate('ForgetPassword')}
+            type="TERTIARY"
             />
-        </View>
+
+            <CustomButton
+            text="Don't have an account? Create one"
+            onPress={()=> navigation.navigate('Sign Up')}
+            type="TERTIARY"
+            />
+
+         </View>
+       
+        // </ScrollView>
     );
 };
 

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     //     color:'#5b5b5b'
     // },
     row: {
-        marginTop:10,
+        marginTop:20,
         flexDirection: "row",
     },
     manufacturer:{
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
     },
     model:{
-        marginLeft:20,
+        marginLeft:100,
         fontSize:15,
         fontWeight:'bold',
     },
@@ -59,9 +59,9 @@ const styles = StyleSheet.create({
         marginLeft:8,
         fontSize:18,
     },
-    uploaded_at:{
+    phone:{
         marginTop:1,
-        marginLeft:60,
+        marginLeft:55,
         fontSize:15,
         fontWeight:'bold',
     },
