@@ -39,8 +39,8 @@ const SignInScreen = () => {
                 secureTextEntry={true}
             />
             <CustomButton text='Sign In'
-            //  onPress={onSignInPressed} 
-             onPress={()=> navigation.navigate('Explore')}
+           
+             onPress={()=> navigation.navigate('Home')}
              />
             
             <CustomButton

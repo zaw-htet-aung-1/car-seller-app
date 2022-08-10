@@ -9,19 +9,59 @@ import { View,
     SafeAreaView
  } from 'react-native';
 
-//  import BottomSheet  from 'reanimated-bottom-sheet';
-//  import Animated from 'react-native';
+ import BottomSheet  from 'reanimated-bottom-sheet';
+import Animated from 'react-native-reanimated';
 
  import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
  import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
-
 const EditProfileScreen =() => {
+  renderInner =() => (
+    <View style={styles.panel}>
+      <View style={{alignItems:'center'}}>
+        <Text style={styles.panelTitle}>Upload Photo</Text>
+        <Text style={styles.panelSubtitle}>Choose Your Profile Picture </Text>
+      </View>
+      <TouchableOpacity style={styles.panelButton}>
+        <Text style={styles.panelButtonTitle}>Take Photo</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.panelButton}>
+        <Text style={styles.panelButtonTitle}>Choose From Library</Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.panelButton} onPress={() => this.bs.current.snapTo(1)}>
+        <Text style={styles.panelButtonTitle}>Cancel</Text>
+      </TouchableOpacity>
+    </View>
+    
+  );
+
+  renderHeader =() =>(
+    <View style={styles.header}>
+      <View style={styles.panelHeader}>
+        <View style={styles.panelHandle}></View>
+      </View>
+    </View>
+
+  );
+  bs = React.createRef();
+  fall = new Animated.Value(1);
+
     return (
         <SafeAreaView style={styles.container}>
-            <View style={{margin:20}}>
+          <BottomSheet
+            ref={this.bs}
+            snapPoints={[330,0]}
+            renderContent={this.renderInner}
+            renderHeader={this.renderHeader}
+            initialSnap={1}
+            callbackNode={this.fall}
+            enabledGestureInteraction={true}
+          />
+            <Animated.View style={{margin:20, 
+            opacity:Animated.add(0.1, Animated.multiply(this.fall,1.0)),
+            }}>
                 <View style={{alignItems:'center'}}>
-                    <TouchableOpacity onPress={() => {}}>
+                    <TouchableOpacity onPress={() => this.bs.current.snapTo(0)}>
                         <View style={{
                             height:100,
                             width:100,
@@ -112,7 +152,7 @@ const EditProfileScreen =() => {
                     <Text style={styles.panelButtonTitle}>Submit</Text>
             
                 </TouchableOpacity>
-            </View>
+            </Animated.View>
             
         </SafeAreaView>
 
@@ -178,7 +218,7 @@ const styles = StyleSheet.create({
     panelButton: {
       padding: 13,
       borderRadius: 10,
-      backgroundColor: '#FF6347',
+      backgroundColor: 'black',
       alignItems: 'center',
       marginVertical: 7,
     },

@@ -47,7 +47,6 @@ const SignInNavigator = () => {
                     headerShown:false
                     }}
                 />
-             
             </AuthStack.Navigator>
        
        

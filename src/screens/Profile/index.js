@@ -84,7 +84,7 @@ const ProfileScreen = () => {
                     <Text style={styles.menuItemText}>Notification</Text>
                 </View>
             </TouchableRipple>
-            <TouchableRipple onPress={()=>{}}>
+            <TouchableRipple onPress={()=> navigation.navigate('Sign In')}>
                 <View style={styles.menuItem}>
                     <Entypo name='log-out' color='black' size={25}/>
                     <Text style={styles.menuItemText}>Log Out</Text>

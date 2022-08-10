@@ -5,6 +5,9 @@ import DestinationSearchScreen from "../screens/DestinationSearch";
 import HomeTabNavigator from "./HomeTabNavigator";
 import PostScreen from "../screens/PostScreen";
 import DetailedPost from "../components/DetailedPost";
+import LearningScreen from "../screens/LearningScreen";
+import SignInNavigator from "./SignInNavigator";
+import LearningNavigator from "./LearningNavigator";
 // import PostScreen from "../screens/PostScreen";
 
 const Stack = createStackNavigator();
@@ -14,13 +17,21 @@ const Router = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
+                    name={'Learning Screen'}
+                    component = {LearningNavigator}
+                    options ={{
+                    headerShown:false
+                    }}
+                />
+           
+                <Stack.Screen
                     name={'Home'}
                     component = {HomeTabNavigator}
                     options ={{
                     headerShown:false
                     }}
                 />
-                <Stack.Screen
+                 <Stack.Screen
                     name={'Destination Search'}
                     component = {DestinationSearchScreen}
                     options ={{

@@ -5,13 +5,14 @@ import places from '../../../assets/data/feed';
 // import Router from "../../navigation/ExploreNavigator";
 import { useRoute } from "@react-navigation/native";
 
-const PostScreen = (props) => {
-    const route = useRoute();
+const PostScreen = ({route}) => {
+
+    const {postId} = route.params;
     
-    const post = places.find(place=> place.id === route.params.postId);
+    // const post = places.find(place=> place.id === route.params.postId);
     return (
         <View style={{backgroundColor:'white'}}>
-            <DetailedPost post={post}/>
+            <DetailedPost postId={postId}/>
         </View>
     );
 };

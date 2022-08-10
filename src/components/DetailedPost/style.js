@@ -13,37 +13,27 @@ const styles = StyleSheet.create({
         resizeMode:'cover',
         borderRadius:10,
     },
-    bedrooms:{
-        marginVertical:10,
-        color:'#5b5b5b'
-    },
-    description:{
-        fontSize:18,
-        lineHeight:26,
-    },
-    prices:{
-        fontSize:18,
-        paddingTop:10,
-    },
-    oldPrice:{
-        color:'#5b5b5b',
-        textDecorationLine:'line-through',
-        marginRight:5,
-    },
-    newPrice:{
-        fontWeight:'bold',
-    },
-    totalPrice:{
-        color:'#5b5b5b',
-        textDecorationLine:'underline',
-        fontSize:16,
-        padding:8,
-    },
-    longDescription:{
-        marginVertical:20,
-        fontSize:16,
-        lineHeight:24,
-    }
+   keyInfoText:{
+    fontSize:24,
+    marginLeft:5,
+    padding:10,
+    fontWeight:'bold'
+   },
+   infoList:{
+    marginLeft:20,
+    padding:5,
+   },
+   keyInfoListText:{
+    fontSize:18,
+    padding:5,
+   },
+   row:{
+    flexDirection:'row',
+    padding:3
+   },
+   icon:{
+    padding:5,
+   }
 });
 
 export default styles;
