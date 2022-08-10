@@ -20,21 +20,11 @@ const HomeScreen = () => {
             </Pressable>
             
            <ImageBackground source={require('../../../assets/images/car-home.webp')} 
-           style={styles.image}>
-
-            
-
-            <Text style={styles.title}>Search Less Live More</Text>
-
-            {/* <Pressable style={styles.button}
-                onPress={()=> console.warn(data,'Explore Btn clicked')}>
-                <Text style={styles.buttonText}>Search</Text>
-            </Pressable> */}
+                style={styles.image}>
+                <Text style={styles.title}>Search Less Live More</Text>
             </ImageBackground> 
         </View>
     );
 };
-
-
 
 export default HomeScreen;

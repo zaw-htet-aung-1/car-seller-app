@@ -6,78 +6,66 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container:{
         marginTop:20,
-        marginHorizontal:20,
+        marginHorizontal:10,
+        padding:10,
+        flexDirection: "row",
+        borderBottomWidth:1,
     },
 
     image:{
-        width:'100%',
-        aspectRatio:4/2,
+        width:'50%',
+        aspectRatio:4/2.5,
         resizeMode:'cover',
-        borderRadius:10,
+      borderRadius:10,
+       
     },
-    // bedrooms:{
-    //     marginVertical:10,
-    //     color:'#5b5b5b'
-    // },
+
     row: {
-        marginTop:20,
-        flexDirection: "row",
+        // marginTop:5,
+    //    backgroundColor:'#ff1919',
+       borderTopRightRadius:10,
+       borderBottomRightRadius:10,
+       padding:5,
+       
     },
     manufacturer:{
-       marginLeft:3,
+       marginLeft:5,
         color:'black',
         fontSize:15,
         fontWeight:'bold',
     },
     model:{
-        marginLeft:100,
+        marginLeft:5,
+        paddingTop:12,
         fontSize:15,
         fontWeight:'bold',
     },
-    // description:{
-    //     fontSize:18,
-    //     lineHeight:26,
-    // },
-    prices:{
-       
-        fontSize:15,
-        paddingTop:10,
+    fontsModel:{
+        paddingTop:12,
     },
+    
     price:{
-        marginLeft:3,
-        marginTop:1,
+        marginLeft:5,
         fontWeight:'bold',
+        paddingTop:15,
         fontSize:15,
+        paddingBottom:15,
     },
-    location:{
-        marginTop:5,
-        marginLeft:50,
-        fontSize:18,
+    fontsPrice:{
+        paddingTop:15,
     },
-    seller:{
-        marginTop:5,
-        marginLeft:8,
-        fontSize:18,
-    },
+
     phone:{
-        marginTop:1,
-        marginLeft:55,
+        marginLeft:5,
         fontSize:15,
         fontWeight:'bold',
     },
-    oldPrice:{
-        color:'#5b5b5b',
-        textDecorationLine:'line-through',
-        marginRight:5,
+    fontsPhone:{
+
     },
-    newPrice:{
-        fontWeight:'bold',
-    },
-    totalPrice:{
-        color:'#5b5b5b',
-        textDecorationLine:'underline',
-        fontSize:16,
-        padding:8,
+    icon:{
+        flexDirection: "row",
+
     },
 });
 

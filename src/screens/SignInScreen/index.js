@@ -11,9 +11,9 @@ const SignInScreen = () => {
 
     const {height} = useWindowDimensions();
 
-    const onSignInPressed = () => {
-        console.warn("Sign In")
-    }
+    // const onSignInPressed = () => {
+    //     console.warn("Sign In")
+    // }
 
     const onSignInFacebook = () => {
         console.warn("onSignInFacebook")
@@ -38,7 +38,10 @@ const SignInScreen = () => {
                 setValue={setPassword}
                 secureTextEntry={true}
             />
-            <CustomButton text='Sign In' onPress={onSignInPressed} />
+            <CustomButton text='Sign In'
+            //  onPress={onSignInPressed} 
+             onPress={()=> navigation.navigate('Explore')}
+             />
             
             <CustomButton
             text="Sign In with Facebook"
