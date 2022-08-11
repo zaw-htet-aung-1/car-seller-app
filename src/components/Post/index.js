@@ -11,7 +11,7 @@ const Post = (props) => {
     const navigation = useNavigation();
 
     return (
-        <SafeAreaView>
+        <SafeAreaView >
             <StatusBar/>
                     <Pressable onPress={() => navigation.navigate('Post',{ postId:post.id} ) } style={styles.container}>
                         <Image 
@@ -34,7 +34,7 @@ const Post = (props) => {
                             <View style={styles.icon}>
                                 <FontAwesome5 name="airbnb" size={18} color={'black'} style={styles.fontsPhone}/>
                                 
-                                <Text onPress={()=>{Linking.openURL(post.phone[0].url);}} style={styles.phone}>{post.phone}</Text>
+                                <Text onPress={()=>{Linking.openURL(post.phone[0].url);}} style={styles.mileage}>{post.mileage}</Text>
                             </View>
                         </View> 
                     </Pressable>

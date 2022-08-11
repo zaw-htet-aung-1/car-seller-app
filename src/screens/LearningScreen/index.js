@@ -13,14 +13,15 @@ const LearningScreen = () => {
     const navigation = useNavigation();
     return (
         <View style={styles.view}>
+            <Text style={styles.title}>Search Less Live More</Text>
+            <View style={styles.containerView}>
+                <Text style={styles.innerTitle}> The best car seller application in Myanmar</Text>
+            </View>
             <Pressable style={styles.searchButton}
-                onPress={() => navigation.navigate('Sign In')}>
-                <Entype name={'magnifying-glass'} size={25} color={'black'} />
-                <Text style={styles.searchButtonText}>Get Started</Text>
+                    onPress={() => navigation.navigate('Sign In')}>
+                    <Text style={styles.searchButtonText}>Get Started</Text>
             </Pressable>
-           <ImageBackground source={require('../../../assets/images/car-seller-home.png')} 
-                style={styles.image}>
-            </ImageBackground> 
+          
         </View>
     );
 };

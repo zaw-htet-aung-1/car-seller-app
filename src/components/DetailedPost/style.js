@@ -7,8 +7,14 @@ const styles = StyleSheet.create({
         marginHorizontal:20,
     },
 
+    imageContainer:{
+        width:'100%',
+        height: 200,
+    },
+
     image:{
         width:'100%',
+        height: 200,
         aspectRatio:16/9,
         resizeMode:'cover',
         borderRadius:10,
@@ -24,14 +30,29 @@ const styles = StyleSheet.create({
     padding:5,
    },
    keyInfoListText:{
-    fontSize:18,
+    fontSize:16,
     padding:5,
+   },
+   row1:{
+    flexDirection:'row',
+    padding:3,
    },
    row:{
     flexDirection:'row',
-    padding:3
+    padding:3,
+    justifyContent:'space-between'
    },
    icon:{
+    padding:5,
+   },
+   containerBox:{
+    backgroundColor:'#f2f2f2',
+    borderRadius:15,
+    paddingTop:5,
+    marginTop:15
+   },
+   descText:{
+    textAlign:'auto',
     padding:5,
    }
 });

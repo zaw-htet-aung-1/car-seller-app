@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
        letterSpacing:3,
     fontSize: 50,
     fontWeight: 'bold',
-    color: 'black',
+    color: '#88E4C4',
     width: '70%',
     marginLeft: 70,
     paddingTop:170,
@@ -63,6 +63,9 @@ const styles = StyleSheet.create({
         fontSize:16,
         fontWeight:'bold',
         color:'black'
+    },
+    postContainer:{
+        top:130
     },
 
 });

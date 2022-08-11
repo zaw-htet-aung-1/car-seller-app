@@ -3,18 +3,46 @@ import { StyleSheet, Dimensions } from "react-native";
 import { color } from "react-native-reanimated";
 
 const styles = StyleSheet.create({
-    image:{
+    title:{
+        letterSpacing:3,
+        fontSize: 50,
+        fontWeight: 'bold',
+        color: 'black',
+        width: '70%',
+        top:300,
+
+    },
+    innerTitle:{
+        // marginLeft:30,
+        top:50,
+        fontSize:18,
+        fontWeight:'bold'
+
+    },
+    view:{
+        backgroundColor:'#88E4C4',
         width:'100%',
-        height:850,
+        height:'100%',
         resizeMode:'cover',
         justifyContent:"center",
-        
+        alignItems:'center'
+    },
+    containerView:{
+        backgroundColor:'white',
+        width:'100%',
+        height:'60%',
+        marginTop:500,
+        borderTopLeftRadius:40,
+        alignContent:'center',
+        alignItems:'center'
+
+
     },
     searchButton:{
-        backgroundColor:'#000',
+        backgroundColor:'#88E4C4',
         width:300,
         marginBottom:150,
-        marginHorizontal:50,
+        marginHorizontal:60,
         height:50,
         // width:Dimensions.get('screen').width - 150,
         borderRadius:20,
@@ -22,16 +50,14 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:'center',
         position:'absolute',
-        top:500,
+        top:650,
         zIndex:100,
         borderColor:'black',
-        
-
     },
     searchButtonText:{
         fontSize:16,
         fontWeight:'bold',
-        color:'white'
+        color:'black'
     },
     button:{
         backgroundColor:'#fff',

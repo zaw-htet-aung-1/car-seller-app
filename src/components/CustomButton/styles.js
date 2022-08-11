@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 
    },
    container_PRIMARY:{
-      backgroundColor:'black',
+      backgroundColor:'#88E4C4',
       marginVertical:20,
    },
    container_SECONDARY:{

@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         maxWidth:500,
         marginBottom:70,
+        color:'#88E4C4'
     },
 
 });

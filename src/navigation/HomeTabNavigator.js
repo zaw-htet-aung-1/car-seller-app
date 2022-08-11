@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/Home";
 import ExploreNavigator from './ExploreNavigator';
 import ProfileNavigator from "./ProfileNavigator";
+import CreatePostScreen from "../screens/CreatePostScreen";
 
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
@@ -49,12 +50,12 @@ const HomeTabNavigator = () => {
             />
             <Tab.Screen
              name={"Create"}
-             component = {HomeScreen}
+             component = {CreatePostScreen}
              options ={{
                 tabBarIcon:({color:string}) => (
                     <Feather name="plus-circle" size={25} color={'black'}/>
                 ),
-                headerShown:false,
+                // headerShown:false,
              }} 
             />
             <Tab.Screen

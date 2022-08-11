@@ -42,7 +42,8 @@ const Router = () => {
                     name={"Post"}
                     component={PostScreen}
                     options={{
-                    title: "Car Details"
+                    title: "Car Details",
+                    headerShown:false
                     }}
                 />
             </Stack.Navigator>

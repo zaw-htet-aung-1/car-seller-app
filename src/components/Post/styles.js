@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         paddingTop:15,
     },
 
-    phone:{
+    mileage:{
         marginLeft:5,
         fontSize:15,
         fontWeight:'bold',
