@@ -50,7 +50,7 @@ const ProfileScreen = () => {
                 </View>
            </View>
 
-           <View style={styles.infoBoxWrapper}>
+           {/* <View style={styles.infoBoxWrapper}>
                 <View style={[styles.infoBox,
                 {borderRightColor:'#dddddd',
                 borderRightWidth:1
@@ -63,7 +63,7 @@ const ProfileScreen = () => {
                     <Title>Post2</Title>
                     <Caption>15</Caption>
                 </View>
-           </View>
+           </View> */}
 
            <View style={styles.menuWrapper}>
             <TouchableRipple onPress={()=> navigation.navigate('Edit Profile')}>
@@ -72,16 +72,16 @@ const ProfileScreen = () => {
                     <Text style={styles.menuItemText}>Edit Profile</Text>
                 </View>
             </TouchableRipple>
-            <TouchableRipple onPress={()=>{}}>
+            <TouchableRipple onPress={()=>navigation.navigate('Home')}>
                 <View style={styles.menuItem}>
                     <Icon name='heart-outline' color='black' size={25}/>
                     <Text style={styles.menuItemText}>Your Favorites</Text>
                 </View>
             </TouchableRipple>
-            <TouchableRipple onPress={()=>{}}>
+            <TouchableRipple onPress={()=>navigation.navigate('Home')}>
                 <View style={styles.menuItem}>
                     <Icon name='bell' color='black' size={25}/>
-                    <Text style={styles.menuItemText}>Notification</Text>
+                    <Text style={styles.menuItemText}>My Posts</Text>
                 </View>
             </TouchableRipple>
             <TouchableRipple onPress={()=> navigation.navigate('Sign In')}>
@@ -133,6 +133,7 @@ const styles = StyleSheet.create({
   },
   menuWrapper: {
     marginTop: 10,
+    borderTopWidth:1,
   },
   menuItem: {
     flexDirection: 'row',

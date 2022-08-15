@@ -1,7 +1,4 @@
-import reactDom from "react-dom";
 import { StyleSheet } from "react-native";
-
-
 
 const styles = StyleSheet.create({
     container:{
@@ -13,10 +10,14 @@ const styles = StyleSheet.create({
     },
 
     image:{
-        width:'50%',
+        width:'40%',
         aspectRatio:4/2.5,
         resizeMode:'cover',
       borderRadius:10,
+      justifyContent:'center',
+      alignContent:'center',
+      alignSelf:'center',
+      padding:10
        
     },
 

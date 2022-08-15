@@ -1,54 +1,22 @@
 import React, {useState} from 'react';
 import { View,
     StyleSheet,
-    Button,
     Text,
     TouchableOpacity,
     ImageBackground,
-    TextInput,
     SafeAreaView,
     ScrollView
  } from 'react-native';
 
- import BottomSheet  from 'reanimated-bottom-sheet';
-import Animated from 'react-native-reanimated';
 import CustomCreateInput from '../../components/CustomCreateInput';
+import DropDownPicker from 'react-native-dropdown-picker';
 
  import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
- import FontAwesome from 'react-native-vector-icons/FontAwesome';
+
 
 const EditProfileScreen =() => {
-  // renderInner =() => (
-  //   <View style={styles.panel}>
-  //     <View style={{alignItems:'center'}}>
-  //       <Text style={styles.panelTitle}>Upload Photo</Text>
-  //       <Text style={styles.panelSubtitle}>Choose Photo To Upload </Text>
-  //     </View>
-  //     <TouchableOpacity style={styles.panelButton}>
-  //       <Text style={styles.panelButtonTitle}>Take Photo</Text>
-  //     </TouchableOpacity>
-  //     <TouchableOpacity style={styles.panelButton}>
-  //       <Text style={styles.panelButtonTitle}>Choose From Library</Text>
-  //     </TouchableOpacity>
-  //     <TouchableOpacity style={styles.panelButton} onPress={() => this.bs.current.snapTo(1)}>
-  //       <Text style={styles.panelButtonTitle}>Cancel</Text>
-  //     </TouchableOpacity>
-  //   </View>
-    
-  // );
 
-  // renderHeader =() =>(
-  //   <View style={styles.header}>
-  //     <View style={styles.panelHeader}>
-  //       <View style={styles.panelHandle}></View>
-  //     </View>
-  //   </View>
-
-  // );
-  // bs = React.createRef();
-  // fall = new Animated.Value(1);
-
-  const [manufacturer, setManufacturer] = useState('');
+  // const [manufacturer, setManufacturer] = useState('');
   const [model, setModel] = useState('');
   const [year, setYear] = useState('');
   const [condition, setCondition] = useState('');
@@ -73,22 +41,13 @@ const EditProfileScreen =() => {
   const [description, setDescription] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [address, setAddress] = useState('');
+  
 
     return (
       <ScrollView>
         <SafeAreaView style={styles.container}>
           
-          {/* <BottomSheet
-            ref={this.bs}
-            snapPoints={[330,0]}
-            renderContent={this.renderInner}
-            renderHeader={this.renderHeader}
-            initialSnap={1}
-            callbackNode={this.fall}
-            enabledGestureInteraction={true}
-          /> */}
-            {/* <Animated.View style={{margin:20, 
-              opacity:Animated.add(0.1, Animated.multiply(this.fall,1.0)),}}> */}
+        
               <View style={{margin:20}}>
                 <View style={{}}>
                     <TouchableOpacity onPress={() =>('')}>
@@ -125,14 +84,19 @@ const EditProfileScreen =() => {
                       </TouchableOpacity>
                     </View>
 
-
-                        <View>
-                          <CustomCreateInput 
-                              placeholder="Manufacturer" 
-                              value={manufacturer} 
-                              setValue={setManufacturer}
-                          />
-                        </View>
+                    <View style={styles.dropDownBox}>  
+                      <DropDownPicker
+                        items={[
+                        {label: 'English', value: 'en'},
+                        {label: 'Deutsch', value: 'de'},
+                        {label: 'French', value: 'fr'},
+                        ]}
+                        // defaultIndex={0}
+                        // containerStyle={{height: 40}}
+                        onChangeItem={item => console.log(item.label, item.value)}
+                        style={styles.dropDown}
+                      />
+                    </View>
                         
                         <View>
                           <CustomCreateInput 
@@ -317,7 +281,7 @@ const EditProfileScreen =() => {
                           <Text style={styles.panelButtonTitle}>Submit</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.commandButton2} onPress={() => {}}>
+                        <TouchableOpacity style={styles.commandButton} onPress={() => {}}>
                           <Text style={styles.panelButtonTitle}>Back</Text>
                         </TouchableOpacity>
                         </View>
@@ -341,6 +305,21 @@ const styles = StyleSheet.create({
       flexDirection:'row',
       
     },
+    dropDownBox:{
+      // marginTop:20,
+    },
+    dropDown:{
+      backgroundColor:'white',
+      width:'100%',
+      height:50,
+      borderColor:'#e8e8e8',
+      borderWidth:1,
+      borderRadius:10,
+      padding:10,
+      marginVertical:15,
+      justifyContent:'center'
+    },
+    
     commandButton: {
       padding: 15,
       borderRadius: 10,
@@ -363,12 +342,6 @@ const styles = StyleSheet.create({
       padding: 20,
       backgroundColor: '#FFFFFF',
       paddingTop: 20,
-      // borderTopLeftRadius: 20,
-      // borderTopRightRadius: 20,
-      // shadowColor: '#000000',
-      // shadowOffset: {width: 0, height: 0},
-      // shadowRadius: 5,
-      // shadowOpacity: 0.4,
     },
     header: {
       backgroundColor: '#FFFFFF',
@@ -376,7 +349,6 @@ const styles = StyleSheet.create({
       shadowOffset: {width: -1, height: -3},
       shadowRadius: 2,
       shadowOpacity: 0.4,
-      // elevation: 5,
       paddingTop: 20,
       borderTopLeftRadius: 20,
       borderTopRightRadius: 20,
@@ -384,6 +356,7 @@ const styles = StyleSheet.create({
     panelHeader: {
       alignItems: 'center',
     },
+    
     panelHandle: {
       width: 40,
       height: 8,
@@ -401,13 +374,13 @@ const styles = StyleSheet.create({
       height: 30,
       marginBottom: 10,
     },
-    panelButton: {
-      padding: 13,
-      borderRadius: 10,
-      backgroundColor: 'black',
-      alignItems: 'center',
-      marginVertical: 7,
-    },
+    // panelButton: {
+    //   padding: 13,
+    //   borderRadius: 10,
+    //   backgroundColor: 'black',
+    //   alignItems: 'center',
+    //   marginVertical: 7,
+    // },
     panelButtonTitle: {
       fontSize: 17,
       fontWeight: 'bold',
